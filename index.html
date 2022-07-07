@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header class="header">
+        <div class="hero">
+          <h2 class="welcome">こんにちは</h2>
+          <h2 class="welcome hide">Kon'nichiwa</h2>
+        </div>
+
+        <div class="anime anime-1">
+          <h4 class="jepang">
+            私の名前は <br />
+            Watashinonamaeha
+          </h4>
+        </div>
+
+        <div class="anime anime-2">
+          <h4 class="indo">Alwin Liufandy</h4>
+        </div>
+      </header>
+      <!-- akhir header -->
+
+      <!-- navbar -->
+      <nav class="menu">
+        <div class="logo">
+          <h1>Try Grid</h1>
+        </div>
+
+        <ul class="list">
+          <li><a href="">Home</a></li>
+          <li><a href="">Product</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Gallery</a></li>
+        </ul>
+      </nav>
+
+      <div class="menu-toggle">
+        <input type="checkbox" name="" id="" />
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <!-- akhir navbar -->
+    </div>
+
+    <script>
+      const menuT = document.querySelector(".menu-toggle input");
+      const nav = document.querySelector("nav.menu");
+
+      menuT.addEventListener("click", function () {
+        nav.classList.toggle("slide");
+      });
+    </script>
+  </body>
+</html>
