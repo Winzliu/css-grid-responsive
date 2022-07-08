@@ -40,7 +40,7 @@ img {
   height: 300px;
   background-position: center;
   grid-area: hero;
-  border-radius: 5px;
+  border-radius: 20px 5px 5px 5px;
   padding: 50px;
 }
 
@@ -56,6 +56,7 @@ img {
   background-position: center;
   grid-area: anime-1;
   border-radius: 5px;
+  border-radius: 5px 20px 5px 5px;
   padding: 30px;
   box-sizing: border-box;
 }
@@ -117,6 +118,8 @@ img {
 }
 
 .menu ul.list li:hover a {
+  box-shadow: 0 20px 5px -14px black;
+  transform: scale(0.9);
   background-color: white;
   color: black;
 }
@@ -179,6 +182,57 @@ img {
 
 /* akhir hamburger menu animation */
 
+/* services */
+.services {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.services .service {
+  background-color: rgba(255, 255, 255, 0.803);
+  color: black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.services .service:hover {
+  background-color: rgba(0, 0, 0, 0.803);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.services .service .icon {
+  font-size: 2em;
+}
+
+.services .service .text {
+  width: 80%;
+  font-size: 0.6em;
+  line-height: 18px;
+}
+
+.services .service .text h3 {
+  font-weight: 500;
+  font-size: 1.7em;
+}
+
+.services .service .text p {
+  font-style: italic;
+}
+/* akhir services */
+
 /* reponsive */
 @media screen and (min-width: 1200px) {
   .container {
@@ -201,12 +255,14 @@ img {
 
   /* navbar */
   .menu {
+    background-color: rgba(0, 0, 0, 0.607);
+    padding: 10px;
     order: 1;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    margin-bottom: 10px;
+    margin: 0;
     grid-template-columns: 1fr 2fr;
   }
 
@@ -231,13 +287,11 @@ img {
   }
 
   .menu ul.list li:hover a {
+    box-shadow: 0 25px 5px -15px rgb(255, 255, 255);
     background-color: black;
     color: white;
   }
   /* akhir navbar */
-}
-
-@media screen and (max-width: 924px) {
 }
 
 @media screen and (max-width: 768px) {
@@ -251,6 +305,12 @@ img {
     transform: scale(0);
   }
   /* akhir header */
+
+  /* service */
+  .services {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* akhir service */
 }
 
 @media screen and (max-width: 530px) {
@@ -277,7 +337,7 @@ img {
   }
 
   .header .anime-1 {
-    border-radius: 5px 5px 5px 20px;
+    border-radius: 5px 5px 5px 5px;
     padding: 20px 40px;
   }
 
@@ -288,7 +348,7 @@ img {
 
   .header .anime-2 {
     padding: 20px 10px;
-    border-radius: 5px 5px 20px 5px;
+    border-radius: 5px 5px 5px 5px;
   }
 
   .header .anime-2 .indo {
@@ -307,7 +367,7 @@ img {
     position: absolute;
     left: -10px;
     background-color: rgba(32, 27, 37, 0.5);
-    height: 120vh;
+    height: 150%;
     width: 100%;
     top: -30px;
     align-items: center;
@@ -323,7 +383,7 @@ img {
     font-size: 30px;
     align-items: center;
     width: 90%;
-    height: 30%;
+    height: 250px;
     justify-content: space-between;
     flex-direction: column;
   }
@@ -345,5 +405,11 @@ img {
     top: -80px;
   }
   /* akhir navbar */
+
+  /* service */
+  .services {
+    grid-template-columns: 1fr;
+  }
+  /* akhir service */
 }
 /* akhir responsive */
